@@ -7,9 +7,9 @@ function getuserinfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
-        headers: {
-            Authorization: localStorage.getItem("token") || ''
-        },
+        // headers: {
+        //     Authorization: localStorage.getItem("token") || ''
+        // },
         success: function (res) {
             if (res.status != 0) {
                 return layer.msg(res.message);
@@ -36,7 +36,7 @@ function renderAvater(userdata) {
         $(".layui-nav-img").attr('src', userdata.user_pic).show();
         $(".avava").hide();
     } else {
-        let usernameonr = userdata.username[0];
+        let usernameonr =userdata.nickname[0] || userdata.username[0];
         $(".avava").html(usernameonr).show();
         $(".layui-nav-img").hide();
 

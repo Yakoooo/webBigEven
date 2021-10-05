@@ -7,7 +7,7 @@ $.ajaxPrefilter((options) => {
 
     //统一的请求头
     if (options.url.indexOf('/my/' !== -1)) {
-        options.header = { Authorization: localStorage.getItem("token") || '' }
+        options.headers = { Authorization: localStorage.getItem("token") || '' }
     }
 
     options.complete = function (aa) {
