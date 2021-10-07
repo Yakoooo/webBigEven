@@ -30,7 +30,6 @@ $(function () {
     })
 
     $("#upLoadimg").on('click',function(e){
-        console.log("触发")
         e.preventDefault();
 
         var dataURL = $image

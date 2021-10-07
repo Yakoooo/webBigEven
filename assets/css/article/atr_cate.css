@@ -1,0 +1,15 @@
+html,body{padding: 0px;margin: 0px;}
+body{
+    padding: 15px;
+}
+.layui-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tmpAdd_body,#tmpedit_body{
+    padding: 20px;
+}
+.disnone{
+    display: none;
+}
